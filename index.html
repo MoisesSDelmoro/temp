@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Plataforma de análises inteligentes</title>
+  <script src="./cookie.js"></script>
+  <script src="https://unpkg.com/three@0.129.0/build/three.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto|Material+Icons" rel="stylesheet">
+  
+  
+
+  <script type="module" crossorigin src="/'./'/assets/index.74f91bdd.js"></script>
+  <link rel="stylesheet" href="/'./'/assets/index.e1da15a5.css">
+</head>
+
+<body>
+
+  <div class="showmap">
+    <label class="switch">
+      <input type="checkbox" id="showmap" checked>
+      <span class="slider round"></span>
+    </label><br>Sempre exibir apresentação
+  </div>
+
+  <div
+    style="align-items:top; display: flex; direction:column; color:#fff;position: absolute;z-index: 100;height: 100%;width: 100%;"
+    id="main">
+<!-- 
+    <div style="margin-left: 1ch; padding-top: 1.5em; font-size: 4rem;">Plataforma de análises inteligentes
+      <div style="font-size: 2.5rem">Mobilidade Urbana</div>
+      <button id="button-redirect" class="button button_enter" onclick="javascript:parent.redirect()">Entrar</button>
+    </div> -->
+
+
+
+    <div style="position: absolute; right: 0; bottom: 0;">
+      <img src="/'./'/assets/cm.513f4226.png" width="170px">
+    </div>
+
+  </div>
+  <div class="map-container">
+    <div class="map-over"></div>
+    <div id="map" style="position: relative;z-index: 1;opacity: 25%;width: 100%;" class="map"></div>
+  </div>
+  <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+  <script>
+    function redirect() {
+      window.parent.postMessage('', '*')
+    }
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuJ7F7R9k-3qFwZ8_ShcZK1b_sXPZuHfg&callback=initMap&v=beta"
+    defer>
+    </script>
+</body>
+
+</html>
